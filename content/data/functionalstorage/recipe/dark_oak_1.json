@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "PPP",
+    "PCP",
+    "PPP"
+  ],
+  "key": {
+    "P": "minecraft:dark_oak_planks",
+    "C": "minecraft:chest"
+  },
+  "result": {
+    "id": "functionalstorage:dark_oak_1",
+    "count": 1
+  }
+}

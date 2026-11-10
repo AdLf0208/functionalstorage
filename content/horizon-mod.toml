@@ -1,0 +1,9 @@
+# Port-owned content mod for the Functional Storage 1x1 drawer slice.
+# The models, textures, recipes and lang are carried from Functional Storage
+# 1.5.8 (Buuz135/FunctionalStorage, MIT); the Rust is a clean-room rewrite.
+id = "functionalstorage"
+name = "Functional Storage"
+version = "1.5.8"
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

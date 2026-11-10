@@ -1,0 +1,9 @@
+{
+  "template": "minecraft:barrel",
+  "properties": {
+    "hardness": 2.0,
+    "explosion_resistance": 3.0,
+    "requires_tool": false,
+    "sounds": "minecraft:oak_planks"
+  }
+}
