@@ -1,0 +1,19 @@
+[package]
+# Port of: Functional Storage 1.5.8 (Buuz135/FunctionalStorage, MIT),
+# Minecraft Java 1.21.1 NeoForge. Clean-room Rust rewrite; local-only until
+# publishing is approved (ARCHITECTURE.md §8).
+name = "horizon-functionalstorage"
+version = "1.5.8"
+edition = "2024"
+rust-version = "1.95"
+license = "MIT"
+description = "Functional Storage for Horizon: the 1x1 storage drawers"
+publish = false
+
+[lib]
+# This exact source is also injected as a same-crate module by horizon-mixins.
+path = "mixins/functionalstorage/runtime.rs"
+
+[workspace]
+members = ["tools/audit"]
+resolver = "2"

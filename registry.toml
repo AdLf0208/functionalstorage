@@ -1,0 +1,49 @@
+id = "functionalstorage"
+kind = "native-mod"
+name = "functionalstorage"
+summary = "A Horizon port of functionalstorage."
+description = """
+A port of [functionalstorage](Buuz135/FunctionalStorage) for Horizon.
+
+**Implemented so far**
+
+- Ten wood-coloured 1x1 drawers (`functionalstorage:<wood>_1`), one big slot
+- each, one item kind per drawer, capacity 2048 for a 64-stack item (upstream
+- `BigInventoryHandler`: `64 * base`, base 32 for `X_1`, scaled by the item's
+- stack size). The carried content is the upstream models/textures (MIT), the
+- recipes, loot tables, lang, one creative tab and the drawer menu type.
+- | Area | Upstream | This port |
+- |---|---|---|
+- | capacity | `BigInventoryHandler.getTotalAmount = 64 * base`, `getSlotLimit = floor(total * maxStack / 64)`; `X_1` base 32 → 2048 (512 for a 16-stack item, 32 for a 1-stack item) | same, `runtime::capacity` |
+
+**Not yet ported**
+
+- The left-click **take** stays removed by the campaign pin ruling: a left click
+- on the front only shows the action-bar hint "Open the drawer to withdraw" and
+- takes nothing; withdrawal is the one-slot menu's result-slot take (verified
+- → 63). The pin still reverts a block-entity write from `left_click_block`
+- (and the other non-player-action contexts), so the take was not re-enabled.
+- The other documented gaps (no front count text, no upgrades, no 1x2/2x2 or
+- other families, the locked-drawer hopper quirk, wall-clock cooldowns) are
+- unchanged.
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/functionalstorage"
+icon = "icons/functionalstorage.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "functionalstorage.hnmod"
+sha256 = "36f43d7c64a51c244a9abd6e0d0b1c0f38194605245adfc075e0d3ef60ae48fc"
+changelog = "First release"
